@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     'qrgen_app',
     'qruser_app',
+    'rest_framework',
     
 ]
 

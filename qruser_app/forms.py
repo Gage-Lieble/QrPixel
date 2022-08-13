@@ -8,5 +8,5 @@ class SignUpForm(forms.Form):
     email = forms.EmailField(label='Email', widget=forms.TextInput(attrs={'placeholder': ' Email'}))
 
 class LoginForm(forms.Form):
-    email = forms.EmailField(label='Email', widget=forms.TextInput(attrs={'placeholder': ' Email'}))
+    username = forms.CharField(label='Username', max_length=20, widget=forms.TextInput(attrs={'placeholder': ' Username'}))
     password = forms.CharField(widget=forms.PasswordInput(attrs={'placeholder': ' Password'}), label='Password', max_length=10,)
