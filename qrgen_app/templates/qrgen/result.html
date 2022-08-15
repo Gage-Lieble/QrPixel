@@ -9,6 +9,16 @@
 <body>
     <img src="{{imgsrc}}" alt="">
     <h1>{{qrname}}</h1>
+
+    
+    {% if request.user.is_authenticated %}
+    user: {{request.user}}
     <a href="{% url 'qruser:saveqr' qrname=vqrname qrlink=vqrlink qrcolor=vqrcolor %}">Save Qr</a>
+    {% else %}
+    <a href="{% url 'qruser:login' %}">Save Qr</a>
+    {% endif %}
+
+        
+    
 </body>
 </html>

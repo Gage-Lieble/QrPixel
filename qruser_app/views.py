@@ -57,6 +57,6 @@ def profile(request):
     return render (request, 'qruser/profile.html', context)
 
 def saveQr(request, qrname, qrlink, qrcolor):
-    model = QrGenModel(owner=request.user, link=qrlink, qr_name=qrname, color=qrcolor)
+    model = QrGenModel(owner=request.user, link=qrlink.replace('`', '/'), qr_name=qrname, color=qrcolor)
     model.save()
     return HttpResponseRedirect(reverse('qruser:profile'))

@@ -11,5 +11,7 @@
         {% csrf_token %} {{form}}
         <button type="submit">Login</button>
     </form>
+
+    <a href="{% url 'qruser:signup' %}">Signup</a>
 </body>
 </html>
