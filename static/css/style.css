@@ -1,5 +1,12 @@
-body {
+html, body {
     background-color: #f3f2ed;
+    overflow-x: hidden;
+    max-width: 100%;
+    font-family: Pixel;
+}
+h1{text-align: center;}
+#container{
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -43,6 +50,7 @@ form>button[type='submit']:hover{
 }
 #brandlogo{
     width: 100px;
+    margin-bottom: 40px;
 }
 
 #nav-links{
@@ -87,6 +95,39 @@ align-items: center;
     margin-top: 50px;
     text-align: center;
     color: rgb(142, 142, 142);
+}
+
+#saved-code-wrapper{
+    background-color: #e1e0dc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    margin-bottom: 15px;
+    justify-content: space-evenly;
+    overflow: hidden;
+    text-align: center;
+}
+#home-btn{
+    width: 100%;
+    text-align: left;
+    color: #ef3e23;
+    margin: 15px;
+}
+#home-btn>a{
+    padding: 0px;
+}
+#saved-code-wrapper>img{
+    margin: 10px;
+}
+#saved-code-wrapper>p{
+    margin: 0px;
+    width: 150px;
+    text-align: center;
+    
 }
 @font-face {
     font-family: 'Pixel';

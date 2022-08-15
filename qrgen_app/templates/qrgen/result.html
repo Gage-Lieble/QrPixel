@@ -11,6 +11,8 @@
     <link rel="icon" href="{% static 'imgs/favicon.svg' %}">
 </head>
 <body>
+    <div id="home-btn"><a href="{% url 'genapp:index' %}">< Home</a></div>
+    <div id="container">
     <img src="{{imgsrc}}" alt="">
     <h1>{{vqrname}}</h1>
 
@@ -27,6 +29,6 @@
     </div>
 </div>
         
-    
+    </div>
 </body>
 </html>

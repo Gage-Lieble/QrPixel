@@ -11,13 +11,16 @@
     <link rel="icon" href="{% static 'imgs/favicon.svg' %}">
 </head>
 <body>
-    Signup
+    <div id="home-btn"><a href="{% url 'genapp:index' %}">< Home</a></div>
+
+    <div id="container">
+    <h1>Sign Up</h1>
     <form action="{% url 'qruser:signup' %}" method="POST">
        {% csrf_token %} {{form}}
        <button type="submit">Submit ></button>
     </form>
 
     <a href="{% url 'qruser:login' %}">Login ></a>
-    
+    </div>
 </body>
 </html>
