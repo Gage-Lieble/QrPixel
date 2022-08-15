@@ -9,6 +9,6 @@
 <body>
     <img src="{{imgsrc}}" alt="">
     <h1>{{qrname}}</h1>
-    <a download="{{qrname}}.jpg" href="{{imgsrc}}.jpg">Download Qr Code</a>
+    <a href="{% url 'qruser:saveqr' qrname=vqrname qrlink=vqrlink qrcolor=vqrcolor %}">Save Qr</a>
 </body>
 </html>

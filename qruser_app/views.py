@@ -1,7 +1,7 @@
 
 from django.shortcuts import render
-
-from .serializers import QrSaverSerializer
+from qrgen_app.models import *
+from qrgen_app.forms import QrGenForm
 from .forms import *
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
@@ -10,22 +10,6 @@ from django.urls import reverse
 # Create your views here.
 
 
-# API
-from rest_framework.response import Response
-from rest_framework.decorators import api_view
-
-@api_view(['GET'])
-def getData(request):
-    qrcodes = QrSaver.objects.all()
-    serializer = QrSaverSerializer(qrcodes, many=True)
-    return Response(serializer.data)
-
-@api_view(['POST'])
-def postData(request):
-    serializer = QrSaverSerializer(data=request.data)
-    if serializer.is_valid():
-        serializer.save()
-    return Response(serializer.data)
 
 def signup(request):
 
@@ -68,3 +52,8 @@ def userlogout(request):
 
 def profile(request):
     return render (request, 'qruser/profile.html')
+
+def saveQr(request, qrname, qrlink, qrcolor):
+    form = QrGenModel(owner=request.user, link=qrlink, qr_name=qrname, color=qrcolor)
+    form.save()
+    return HttpResponseRedirect(reverse('qruser:profile'))

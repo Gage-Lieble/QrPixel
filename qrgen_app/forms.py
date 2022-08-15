@@ -7,4 +7,5 @@ class QrGenForm(forms.ModelForm):
     class Meta:
         model = QrGenModel
         fields = '__all__'
+        exclude = ['owner']
         widgets ={'color': TextInput(attrs={'type':'color'})}
