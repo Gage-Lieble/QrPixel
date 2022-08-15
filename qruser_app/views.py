@@ -51,9 +51,12 @@ def userlogout(request):
     return HttpResponseRedirect(reverse('qruser:login'))
 
 def profile(request):
-    return render (request, 'qruser/profile.html')
+    saved_qr = QrGenModel.objects.all().filter(owner=request.user)
+    
+    context = {'usercodes':saved_qr}
+    return render (request, 'qruser/profile.html', context)
 
 def saveQr(request, qrname, qrlink, qrcolor):
-    form = QrGenModel(owner=request.user, link=qrlink, qr_name=qrname, color=qrcolor)
-    form.save()
+    model = QrGenModel(owner=request.user, link=qrlink, qr_name=qrname, color=qrcolor)
+    model.save()
     return HttpResponseRedirect(reverse('qruser:profile'))

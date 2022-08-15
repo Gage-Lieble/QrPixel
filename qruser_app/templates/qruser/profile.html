@@ -7,6 +7,12 @@
     <title>Hello</title>
 </head>
 <body>
-    {{request.user}}
+    <h1>{{request.user}}</h1>
+
+{% for codes in usercodes %}
+    <img src="http://api.qrserver.com/v1/create-qr-code/?data={{codes.link}}&size=100x100&color={{codes.color}}" alt=""><p>{{codes.qr_name}}</p>
+{% endfor %}
+    
+<a href="{% url 'qruser:logout' %}">Logout</a>
 </body>
 </html>
