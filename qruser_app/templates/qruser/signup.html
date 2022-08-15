@@ -1,19 +1,23 @@
 <!DOCTYPE html>
+
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signup</title>
+    <title>Your Code</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="icon" href="{% static 'imgs/favicon.svg' %}">
 </head>
 <body>
     Signup
     <form action="{% url 'qruser:signup' %}" method="POST">
        {% csrf_token %} {{form}}
-       <button type="submit">Submit</button>
+       <button type="submit">Submit ></button>
     </form>
 
-    <a href="{% url 'qruser:login' %}">Login</a>
+    <a href="{% url 'qruser:login' %}">Login ></a>
     
 </body>
 </html>

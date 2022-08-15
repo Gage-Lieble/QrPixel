@@ -1,3 +1,4 @@
+from tkinter.ttk import Label
 from django import forms
 from django.forms import ModelForm
 from .models import *
@@ -8,4 +9,13 @@ class QrGenForm(forms.ModelForm):
         model = QrGenModel
         fields = '__all__'
         exclude = ['owner']
-        widgets ={'color': TextInput(attrs={'type':'color'})}
+        labels = {
+            'qr_name': 'Name Your Code',
+            'link': 'Your Link'
+        }
+        widgets ={
+            'qr_name': TextInput(attrs={'autocomplete':'off'}),
+            'link': TextInput(attrs={'autocomplete':'off'}),
+            'color': TextInput(attrs={'type':'color'}),
+
+            }

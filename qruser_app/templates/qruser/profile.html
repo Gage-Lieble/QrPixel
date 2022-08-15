@@ -1,10 +1,14 @@
 <!DOCTYPE html>
+
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello</title>
+    <title>Your Code</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="icon" href="{% static 'imgs/favicon.svg' %}">
 </head>
 <body>
     <h1>{{request.user}}</h1>
@@ -13,8 +17,8 @@
     <img src="http://api.qrserver.com/v1/create-qr-code/?data={{codes.link}}&size=100x100&color={{codes.color}}" alt=""><p>{{codes.qr_name}}</p>
 {% endfor %}
     
-<a href="{% url 'qruser:logout' %}">Logout</a>
+<a href="{% url 'qruser:logout' %}">Logout ></a>
 
-<a href="{% url 'genapp:index' %}">Home</a>
+<a href="{% url 'genapp:index' %}">Home ></a>
 </body>
 </html>

@@ -1,18 +1,25 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QrGen</title>
+    <title>Qr Pixel</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="icon" href="{% static 'imgs/favicon.svg' %}">
 </head>
 <body>
+
+    <img id="brandlogo" src="{% static 'imgs/QrLogo.svg' %}" alt="qrpixellogo">
     <form action="{% url 'genapp:result' %}" method="POST">
         {% csrf_token %}{{form}}
         <button type="submit">Create Code</button>
     </form>
-
-    <a href="{% url 'qruser:profile' %}">Profile</a>
-    <a href="{% url 'qruser:signup' %}">Signup or Login</a>
+    
+    <div id="nav-links">
+    <a href="{% url 'qruser:profile' %}">Profile ></a>
+    <a href="{% url 'qruser:signup' %}">Signup or Login ></a>
+</div>
 </body>
 </html>

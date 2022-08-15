@@ -1,23 +1,31 @@
 <!DOCTYPE html>
+
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Code</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="icon" href="{% static 'imgs/favicon.svg' %}">
 </head>
 <body>
     <img src="{{imgsrc}}" alt="">
-    <h1>{{qrname}}</h1>
+    <h1>{{vqrname}}</h1>
 
-    
+    <div id="details">    
     {% if request.user.is_authenticated %}
-    user: {{request.user}}
-    <a href="{% url 'qruser:saveqr' qrname=vqrname qrlink=vqrlink qrcolor=vqrcolor %}">Save Qr</a>
+    <h3>User: {{request.user}}</h3>
+    <a href="{% url 'qruser:saveqr' qrname=vqrname qrlink=vqrlink qrcolor=vqrcolor %}">Save Code</a>
     {% else %}
-    <a href="{% url 'qruser:login' %}">Save Qr</a>
+    <a href="{% url 'qruser:login' %}">Save Code</a>
     {% endif %}
 
+    <div id="instructions">
+        <p>To use your custom <span style="color:#ef806f">QRcode</span>, take out any cell phone camera and scan the code</p>
+    </div>
+</div>
         
     
 </body>
