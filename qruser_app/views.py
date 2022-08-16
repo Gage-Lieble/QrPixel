@@ -19,16 +19,18 @@ def signup(request):
         return render (request, 'qruser/signup.html', context)
     elif request.method == 'POST':
         su_form = SignUpForm(request.POST)
+     
         if su_form.is_valid():
             user = User.objects.create_user(
                 username = su_form.cleaned_data['username'],
                 password = su_form.cleaned_data['password'],
-                email = su_form.cleaned_data['email'],
             )
-            ##### THIS ISNT WORKING VVVV
+            
             new_user = authenticate(username=su_form.cleaned_data['username'], password=su_form.cleaned_data['password'])
             login(request, new_user)
         return HttpResponseRedirect(reverse('qruser:profile'))
+       
+
 
 def userlogin(request):
     if request.method == 'GET':

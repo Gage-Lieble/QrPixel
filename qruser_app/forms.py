@@ -5,7 +5,7 @@ from .models import *
 class SignUpForm(forms.Form):
     username = forms.CharField(label='Username', max_length=20, widget=forms.TextInput(attrs={'autocomplete':'off'}))
     password = forms.CharField(widget=forms.PasswordInput(), label='Password', max_length=10,)
-    email = forms.EmailField(label='Email', widget=forms.TextInput(attrs={'autocomplete':'off'}))
+    
 
 class LoginForm(forms.Form):
     username = forms.CharField(label='Username', max_length=20, widget=forms.TextInput(attrs={'autocomplete':'off'}))
