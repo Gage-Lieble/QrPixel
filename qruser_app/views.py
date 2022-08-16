@@ -25,8 +25,10 @@ def signup(request):
                 password = su_form.cleaned_data['password'],
                 email = su_form.cleaned_data['email'],
             )
-            # context = {'username': user.username}
-        return render (request, 'qruser/profile.html')
+            
+            new_user = authenticate(username=su_form.cleaned_data['username'], password=su_form.cleaned_data['password'])
+            login(request, new_user)
+        return HttpResponseRedirect(reverse('qruser:profile'))
 
 def userlogin(request):
     if request.method == 'GET':

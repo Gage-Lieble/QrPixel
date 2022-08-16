@@ -4,15 +4,20 @@ html, body {
     max-width: 100%;
     font-family: Pixel;
     font-size: 20px;
+    margin: 0px;
+    overflow-y: hidden;
 }
+
+
 h1{text-align: center;}
 #container{
-    overflow: hidden;
+    /* overflow: hidden; */
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 50px;
     font-family: Pixel;
+    
 }
 
 form{
@@ -69,7 +74,10 @@ a:hover{
     color: black;
 }
 
-
+#exitBtn{
+    width: 25px;
+    padding: 10px;
+}
 
 
 
@@ -155,6 +163,72 @@ margin-bottom: 25px;
     padding-right: 25px;
 }
 
+
+
+
+#instruction-wrap{
+    width: 100%;
+    height: 100%;
+    background-color: #f3f2ed;
+    position: fixed;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: none;
+}
+
+#instuctionsBtn{
+    color: #ef3e23;
+}
+
+#logoutBtn{
+    color: #ef3e23;
+}
+
+
+
+
+
+
+
+
+
+#logout-wrap{
+    width: 100%;
+    height: 100%;
+    background-color: #f3f2ed;
+    position: fixed;
+  
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
+    display: none;
+}
+
+#error-header{
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#error-msg{
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#yes-btn, #no-btn{
+    background-color: #ef3e23;
+    width: 45px;
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
+
+#btn-wrap{
+    display: flex;
+    justify-content: space-around;
+}
 
 
 
