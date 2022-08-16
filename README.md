@@ -21,18 +21,18 @@ Stored data that the app will require
 - Username
 - Password
 ## Schedule
-#### Week 1:
+#### Session 1:
 MVP
 - [x] Create the Qrcode generator (lable, color, link)
 - [x] Use backend to generate Qrcode img
 - [x] Display the Qrcode with basic details (lable)
-#### Week 2:
+#### Session 2:
 Extra
 - [x] Create login & register system
 - [x] Create function to save Qrcodes to profile
 - [x] Allow user to remove Qrcodes from list
 - [ ] Create 'cool' javascript animations
-#### Week 3:
+#### Session 3:
 Finalizations
 - [x] Begin styling 
 - [x] Create app logo and image assests
