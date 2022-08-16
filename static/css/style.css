@@ -7,7 +7,10 @@ html, body {
     margin: 0px;
     overflow-y: hidden;
 }
-
+::selection{
+    background-color: #ef3e23;
+    color: white;
+}
 
 h1{text-align: center;}
 #container{
@@ -19,7 +22,15 @@ h1{text-align: center;}
     font-family: Pixel;
     
 }
-
+#instruction-container{
+    /* overflow: hidden; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    font-family: Pixel;
+    
+}
 form{
     display: flex;
     flex-direction: column;
@@ -34,6 +45,7 @@ form>input{
     border: 3px solid black;
     padding: 5px;
     font-family: Pixel;
+    font-size: 20px;
 }
 form>input[type='color']{
     width: 60px;
@@ -80,7 +92,9 @@ a:hover{
 }
 
 
-
+.qr-label{
+    font-size: 30px;
+}
 #details{
 display: flex;
 flex-direction: column;
@@ -179,17 +193,18 @@ margin-bottom: 25px;
 #instuctionsBtn{
     color: #ef3e23;
 }
-
+#instuctionsBtn:hover{
+    color: black;
+    cursor: pointer;
+}
 #logoutBtn{
     color: #ef3e23;
+    margin-top: 20px;
 }
-
-
-
-
-
-
-
+#logoutBtn:hover{
+    color: black;
+    cursor: pointer;
+}
 
 
 #logout-wrap{
@@ -230,10 +245,105 @@ margin-bottom: 25px;
     justify-content: space-around;
 }
 
-
+#no-btn:hover{
+   background-color: black;
+   
+   cursor: pointer;
+}
+#yes-btn:hover{
+    background-color: black;
+   
+   cursor: pointer;
+}
 
 
 @font-face {
     font-family: 'Pixel';
     src: local('rounded'), url('./fonts/Pixel.TTF') format("truetype");
+}
+
+
+
+@media screen and (min-width: 768px) {
+
+    body{
+        font-size: 25px;
+    }
+    form>input{
+        font-size: 30px;
+    }
+    form>button{
+        font-size: 25px;
+    }
+    form>input[type='color']{
+        width: 100px;
+        height: 100px;
+    }
+
+    .result-qr{
+        width: 250px;
+    }
+    .qr-label{
+        font-size: 40px;
+    }
+    #instuctionsBtn{
+        margin: 10px 0px 10px 0px;
+        font-size: 30px;
+    }
+    a{
+        margin: 10px 0px 10px 0px;
+        font-size: 30px;
+    }
+    .saved-qr-img{
+        width: 250px !important;
+        height: 250px;
+    }
+    #saved-code-wrapper{
+        padding-top: 50px;
+        width: 475px;
+    }
+    #saved-code-wrapper>p{
+        font-size: 30px;
+    }
+    .delete-btn>img{
+        width: 50px;
+        padding: 25px;
+    }
+    .delete-btn{
+        margin: 0px;
+    }
+    #logoutBtn{
+        font-size: 30px;
+    }
+    #navlogo{
+        width: 75px;
+        padding-right: 30px;
+    }
+    #btn-wrap{
+        width: 250px;
+        margin: 0 auto;
+        
+        align-items: center;
+    }
+    #no-btn{
+        height: 30px;
+    }
+    #yes-btn{
+        width: 75px;
+    }
+    #error-header{
+        font-size: 40px;
+    }
+}
+
+@media screen and (min-width: 1366px) {
+    
+    #instruction-container{
+        width: 700px;
+        margin: 0 auto;
+
+    }
+    #home-btn{
+        justify-content: space-around;
+    }
 }

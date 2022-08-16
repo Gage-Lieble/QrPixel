@@ -25,7 +25,7 @@ def signup(request):
                 password = su_form.cleaned_data['password'],
                 email = su_form.cleaned_data['email'],
             )
-            
+            ##### THIS ISNT WORKING VVVV
             new_user = authenticate(username=su_form.cleaned_data['username'], password=su_form.cleaned_data['password'])
             login(request, new_user)
         return HttpResponseRedirect(reverse('qruser:profile'))
@@ -45,7 +45,7 @@ def userlogin(request):
                 return HttpResponseRedirect(reverse('qruser:profile'))
             else:
                 # Checks if user exists
-                li_form.add_error('username', 'Invalid email or password')
+                li_form.add_error('username', 'Invalid username or password')
                 return render(request, 'qruser/login.html', {'form': li_form})
 
 def userlogout(request):

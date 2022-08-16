@@ -28,7 +28,7 @@
 
     <div id="instruction-wrap">
         <div id="home-btn"><div id="exitBtn"><img src="{% static 'imgs/exit.svg' %}" alt="exit"></div><img id="navlogo" src="{% static 'imgs/QrLogo.svg' %}" alt="qrpixellogo"></div>
-    <div id="container">
+    <div id="instruction-container">
         <h1>Scan a QR Code</h1>
     <p style="width:100%; text-align:center">To scan your custom QR code, take out any <span style="color:#ef3e23">cell phone camera</span> and point it toward the code. The link should appear and all you need to do is tap it!</p>
     <h1>Profile</h1>
@@ -40,7 +40,7 @@
 </div>
     </div>
 
-    <div id="home-btn"><a href="{% url 'genapp:index' %}">< Home</a><img id="navlogo" src="{% static 'imgs/QrLogo.svg' %}" alt="qrpixellogo"></div>
+    <div id="home-btn"><a href="{% url 'genapp:index' %}">< Generator</a><img id="navlogo" src="{% static 'imgs/QrLogo.svg' %}" alt="qrpixellogo"></div>
 
     <div id="container">
     <h1>{{request.user}}</h1>
@@ -53,14 +53,14 @@
         {% else %}
         {% for codes in usercodes %}
 <div id="saved-code-wrapper">
-    <img src="http://api.qrserver.com/v1/create-qr-code/?data={{codes.link}}&size=100x100&color={{codes.color}}" alt=""><p>{{codes.qr_name}}</p><br><p>{{codes.link|slice:14}}..</p><p></p>
+    <img class='saved-qr-img' src="http://api.qrserver.com/v1/create-qr-code/?data={{codes.link}}&size=100x100&color={{codes.color}}" alt=""><p>{{codes.qr_name}}</p><br><p>{{codes.link|slice:14}}..</p>
     <a class="delete-btn" href="{% url 'qruser:deleteqr' qrname=codes.qr_name %}"><img src="{% static 'imgs/trash.svg' %}" alt="trashicon"></a>
 </div>
 {% endfor %}
     {% endif %}
         
 
-    <div id="instuctionsBtn">Instructions ></div>
+<div id="instuctionsBtn">Instructions ></div>
 <div id="logoutBtn">Logout ></div>
 
 </div>
