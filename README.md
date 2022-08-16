@@ -31,6 +31,7 @@ Extra
 - [x] Create login & register system
 - [x] Create function to save Qrcodes to profile
 - [x] Allow user to remove Qrcodes from list
+- [ ] Create 'cool' javascript animations
 #### Week 3:
 Finalizations
 - [x] Begin styling 
