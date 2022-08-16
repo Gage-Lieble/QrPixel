@@ -11,10 +11,10 @@
     <link rel="icon" href="{% static 'imgs/favicon.svg' %}">
 </head>
 <body>
-    <div id="home-btn"><a href="{% url 'genapp:index' %}">< Home</a></div>
+    <div id="home-btn"><a href="{% url 'genapp:index' %}">< Home</a><img id="navlogo" src="{% static 'imgs/QrLogo.svg' %}" alt="qrpixellogo"></div>
     <div id="container">
     <img src="{{imgsrc}}" alt="">
-    <h1>{{vqrname}}</h1>
+    <h1 style="font-size: 30px">{{vqrname}}</h1>
 
     <div id="details">    
     {% if request.user.is_authenticated %}
@@ -24,10 +24,10 @@
     <a href="{% url 'qruser:login' %}">Save Code</a>
     {% endif %}
 
-    <div id="instructions">
-        <p>To use your custom <span style="color:#ef806f">QRcode</span>, take out any cell phone camera and scan the code</p>
-    </div>
+    
 </div>
+<a href="{% url 'genapp:instructions' %}">Instructions ></a>
+
         
     </div>
 </body>

@@ -21,3 +21,5 @@ def result(request):
         print(context)
     return render (request, 'qrgen/result.html', context)
 
+def instructions(request):
+    return render (request, 'qrgen/instructions.html')

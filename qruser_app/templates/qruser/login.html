@@ -12,8 +12,7 @@
 </head>
 
 <body>
-    <div id="home-btn"><a href="{% url 'genapp:index' %}">< Home</a></div>
-
+    <div id="home-btn"><a href="{% url 'genapp:index' %}">< Home</a><img id="navlogo" src="{% static 'imgs/QrLogo.svg' %}" alt="qrpixellogo"></div>
     <div id="container">
     <h1>Login</h1>
     <form action="{% url 'qruser:login' %}" method="POST">

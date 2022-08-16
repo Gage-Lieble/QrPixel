@@ -7,6 +7,7 @@ urlpatterns = [
     path('login/', views.userlogin, name='login'),
     path('profile/', views.profile, name='profile'),
     path('logout/', views.userlogout, name='logout'),
-    path('saveqr/<str:qrname>/<str:qrlink>/<str:qrcolor>/', views.saveQr, name='saveqr')
+    path('saveqr/<str:qrname>/<str:qrlink>/<str:qrcolor>/', views.saveQr, name='saveqr'),
+    path('deleteqr/<str:qrname>/', views.deleteQr, name='deleteqr')
 
 ]

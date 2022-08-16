@@ -60,3 +60,9 @@ def saveQr(request, qrname, qrlink, qrcolor):
     model = QrGenModel(owner=request.user, link=qrlink.replace('`', '/'), qr_name=qrname, color=qrcolor)
     model.save()
     return HttpResponseRedirect(reverse('qruser:profile'))
+
+def deleteQr(request, qrname):
+    if QrGenModel.objects.filter(qr_name=qrname).exists():
+        qrcode = QrGenModel.objects.get(qr_name=qrname)
+        qrcode.delete()
+    return HttpResponseRedirect(reverse('qruser:profile'))

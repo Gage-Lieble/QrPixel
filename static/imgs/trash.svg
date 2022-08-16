@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+	<!ENTITY ns_extend "http://ns.adobe.com/Extensibility/1.0/">
+	<!ENTITY ns_ai "http://ns.adobe.com/AdobeIllustrator/10.0/">
+	<!ENTITY ns_graphs "http://ns.adobe.com/Graphs/1.0/">
+	<!ENTITY ns_vars "http://ns.adobe.com/Variables/1.0/">
+	<!ENTITY ns_imrep "http://ns.adobe.com/ImageReplacement/1.0/">
+	<!ENTITY ns_sfw "http://ns.adobe.com/SaveForWeb/1.0/">
+	<!ENTITY ns_custom "http://ns.adobe.com/GenericCustomNamespace/1.0/">
+	<!ENTITY ns_adobe_xpath "http://ns.adobe.com/XPath/1.0/">
+]>
+<svg version="1.1" id="Layer_1" xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 400 466.8"
+	 style="enable-background:new 0 0 400 466.8;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#EF3F23;}
+</style>
+<metadata>
+	<sfw  xmlns="&ns_sfw;">
+		<slices></slices>
+		<sliceSourceBounds  bottomLeftOrigin="true" height="463" width="400" x="0" y="-466.8"></sliceSourceBounds>
+	</sfw>
+</metadata>
+<rect x="30" y="132.1" class="st0" width="340" height="30"/>
+<rect x="-107.3" y="269.4" transform="matrix(-1.836970e-16 1 -1 -1.836970e-16 329.4375 239.4375)" class="st0" width="304.6" height="30"/>
+<rect x="202.7" y="269.4" transform="matrix(-1.836970e-16 1 -1 -1.836970e-16 639.4375 -70.5625)" class="st0" width="304.6" height="30"/>
+<rect x="-17.4" y="84.8" transform="matrix(-1.836970e-16 1 -1 -1.836970e-16 114.75 84.75)" class="st0" width="64.8" height="30"/>
+<rect x="352.4" y="84.9" transform="matrix(-1.836970e-16 1 -1 -1.836970e-16 484.9375 -285.0625)" class="st0" width="65.1" height="30"/>
+<rect y="67.4" class="st0" width="400" height="30"/>
+<rect x="60" y="436.8" class="st0" width="280" height="30"/>
+<rect x="182.4" y="268.6" transform="matrix(-1.836970e-16 1 -1 -1.836970e-16 571.2188 -4.0312)" class="st0" width="210.4" height="30"/>
+<rect x="99.2" y="293.6" transform="matrix(-1.836970e-16 1 -1 -1.836970e-16 512.9688 104.2188)" class="st0" width="210.4" height="30"/>
+<rect x="12.7" y="268.6" transform="matrix(-1.836970e-16 1 -1 -1.836970e-16 401.5312 165.6562)" class="st0" width="210.4" height="30"/>
+<rect x="73" y="50.3" transform="matrix(6.123234e-17 -1 1 6.123234e-17 39.9297 170.4766)" class="st0" width="64.4" height="30"/>
+<rect x="262.6" y="50.3" transform="matrix(6.123234e-17 -1 1 6.123234e-17 229.5234 360.0703)" class="st0" width="64.4" height="30"/>
+<rect x="90.2" y="3.8" class="st0" width="219.6" height="30"/>
+</svg>
