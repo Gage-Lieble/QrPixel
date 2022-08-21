@@ -37,4 +37,4 @@ Finalizations
 - [x] Begin styling 
 - [x] Create app logo and image assests
 - [x] Desktop responsive
-- [ ] Deploy app
+- [x] Deploy app
