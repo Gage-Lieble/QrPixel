@@ -1,5 +1,5 @@
 # Qr Pixel
-[Visit the final product! >](https://qrpixel.herokuapp.com/)
+[Visit the final product! >](https://qrpixel-gage.herokuapp.com/)
 #### Qrcode generator and manager
 > Create custom qr codes and save them to your online profile
 ## Project Outline
