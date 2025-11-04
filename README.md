@@ -1,5 +1,12 @@
 # Qr Pixel
-[Visit the final product! >](https://qrpixel-gage.herokuapp.com/)
+
+## Manual QA Test Cases
+
+| Case ID | Test Scenario | Steps to Reproduce | Expected Result | Actual Result | Status | Notes |
+|---------------|----------------|--------------------|-----------------|----------------|--------|----------------|
+| TC-01 | Create QR code without link input | 1. Enter the label for QR code 2. Leave link field blank 3. Choose the QR code color 4. Click 'Create Code' | The QR code should fail to generate and the page should display a validation error to the user | Works as expected | <span style="color: green;">Passed</span> | - |
+| TC-02 | Interrupt QR code creation | 1. Fill out the QR code creation form 2. Select "Instructions" 3. Select "Back" 4. Continue QR code creation process | After interrupting the QR code creation process by viewing the "Instructions" page, the previously entered information should repopulate the form, saving the user's progress | After clicking the back arrow, the form resets | <span style="color: red;">Failed</span> | Instead of resetting the form, the fields should be repopulated with the information already entered by the user. |
+| TC-03 | Saving QR code to list | 1. Log into a valid account 2. Create a QR code 3. Select "Save" | After saving a QR code, the page should redirect to the "Saved Codes" page displaying a list of the user's QR codes with custom labels and colors | Works as expected | <span style="color: green;">Passed</span> | Functions properly and is intuitive to the user. |
 #### Qrcode generator and manager
 > Create custom qr codes and save them to your online profile
 ## Project Outline
